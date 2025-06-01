@@ -19,6 +19,8 @@ export default class HomePage {
   }
 
   async afterRender() {
+    await this.alertShow();
+
     const containerConfess = document.getElementById("containerConfess");
 
     const messageElement = document.getElementById("message");
@@ -136,6 +138,15 @@ export default class HomePage {
           });
         });
       });
+    });
+  }
+
+  alertShow() {
+    Swal.fire({
+      icon: "info",
+      title:
+        "maaf ya terlambat soalnya ini ada pembaruan setelah ada, yaaa masalah",
+      text: `seharusnya aku kasih ini pas sebelum aku buat masalah tapi sudah terlanjur dan beginilah belum sempurna tapi sudah lumayan lah updatenya karena aku lagi sakit. seharusnya ga gini beda lagi aslinya tapi ini khusus permintaan maaf ku 😅😅`,
     });
   }
 }
